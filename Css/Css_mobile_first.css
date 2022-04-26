@@ -257,8 +257,10 @@ h3 {
   display: flex;
   box-sizing: border-box;
   justify-content: start;
+
   height: 72px;
-  width: 320px;
+  min-width: 80%;
+ 
   background-color: #f1f1f1;
   box-shadow: 0px 3px 20px #cccccc;
   margin: 0px 8px 25px 15px;
@@ -297,6 +299,12 @@ h3 {
   flex-direction: column;
 }
 
+.conteneur_base_carte{display:flex;
+   box-sizing:content-box;
+
+   margin:20px;
+  }
+
 .card_restaurant {
   display: flex;
   flex-direction: column;
@@ -316,7 +324,7 @@ h3 {
   border-radius: 20px 20px 0px 0px;
 }
 .etiquette_nouveau {
-  box-sizing: inherit;
+  box-sizing:content-box;
   width: fit-content;
   position: relative;
   left: 70%;
@@ -332,4 +340,19 @@ h3 {
 .zone_text {display: flex;
   flex-direction: column ;
   
+}
+
+.coeur_favoris{
+  box-sizing:content-box;
+  width: fit-content;
+  position: relative;
+  left: 70%;
+  top:43px;
+  background-color: #8adabf;
+  z-index: 10;
+  color: #19996e;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 15px 5px 15px;
+  border-radius: 2px;
 }
