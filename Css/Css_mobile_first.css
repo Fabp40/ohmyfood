@@ -211,6 +211,7 @@ h1 {
 h2 {
   display: inline-flex;
   padding-left: 20px;
+  margin-bottom: 20px;
   font-size: 25px;
   font-weight: 900;
   width: 70%;
@@ -257,7 +258,7 @@ h3 {
   display: flex;
   box-sizing: border-box;
   justify-content: start;
-
+  text-align: center;
   height: 72px;
   min-width: 80%;
  
@@ -273,6 +274,10 @@ h3 {
 .carte_guide:hover {
   background-color: #ae97c954;
 }
+
+
+
+
 .num_etape {
   position: relative;
   right: 10px;
@@ -292,7 +297,7 @@ h3 {
 /*Zone cards_Restaurants */
 .restaurants {
   background-color: #f3f3f3;
-  padding: 50px 0px 20px 0px
+  padding: 50px 0px 40px 0px;
 }
 .conteneur_liste_restaurants {
   display: flex;
@@ -315,44 +320,88 @@ h3 {
   margin-left: 20px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 1px #cccccc;
+
+
+}
+.conteneur_image
+{
+display:flex;
+width: auto;
+height: 170px;
+object-fit: cover;
 }
 
-.photo_presentation_restaurant {
-  box-sizing: border-box;
-  height: 70%;
+.photo_presentation_restaurant 
+{
+  width: 100%;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
+
+
 .etiquette_nouveau {
-  box-sizing:content-box;
-  width: fit-content;
-  position: relative;
+  position: absolute;
   left: 70%;
-  top:43px;
+  margin-top: 15px;
+
   background-color: #8adabf;
-  z-index: 10;
+  z-index: 5;
   color: #19996e;
   font-size: 14px;
   font-weight: 600;
   padding: 8px 15px 5px 15px;
   border-radius: 2px;
 }
-.zone_text {display: flex;
+.zone_text
+ {
+  display: flex;
   flex-direction: column ;
-  
+  line-height: 25px;
+  padding-left: 10px;
+  padding-top: 15px;
+  }
+
+
+.restaurant
+{
+  font-size: 18px;
+  font-weight: 700;
+
+}
+.ville_restaurant
+{
+  font-size: 18px;
+  font-weight:300;
+
 }
 
-.coeur_favoris{
-  box-sizing:content-box;
-  width: fit-content;
-  position: relative;
-  left: 70%;
-  top:43px;
-  background-color: #8adabf;
-  z-index: 10;
-  color: #19996e;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 8px 15px 5px 15px;
-  border-radius: 2px;
+
+.coeur_favoris
+{
+  position: absolute;
+  left: 80%;
+  padding-top:15px;
+  background-color: transparent;
+  color: #000000;
+  font-size: 25px;
+  font-weight:lighter;
+}
+
+.coeur_favoris:active
+{
+  background-color: pink;
+  z-index: 1;
+  color: #e40000;
+}
+
+/*Footer*/
+
+footer {
+  display: flex;
+  flex-direction : column;
+  background-color: #a83636;
+  padding:20px 
+}
+.logo_footer {
+  color: white
 }
