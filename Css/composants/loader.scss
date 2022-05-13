@@ -1,113 +1,116 @@
+
 /*----------- variables de couleurs-------*/
 $primarycolor: #9356dc;
 $secondarycolor: #ff79da;
 $tierciarycolor: #99e2d0;
 $softbackground: #f4f4f4;
+$loader: 28px;
+
 
 /*--------------- Keyframes d'animation ----------------*/
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-    z-index: -10;
-  }
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        z-index: -10;
+    }
 }
 
-@keyframes fondu {
-  0% {
-    opacity: 1;
-    z-index: 10;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-    z-index: -10;
-  }
+@keyframes fondu{
+  0%{
+      opacity: 1;
+      z-index: 10;
+    }
+100% {
+  opacity: 0;
+  visibility:hidden;
+  z-index: -10;
+}
 }
 
 /*---------------------------*/
 
-.loader {
-  display: flex;
-  justify-content: center;
-
-  width: 100%;
-  animation: fondu 1s ease;
-  animation-fill-mode: both;
-  animation-delay: 2s;
+.loader{
+ display: flex;
+ justify-content: center;
+ 
+width: 100%;
+ animation: fondu 1s ease;
+ animation-fill-mode: both;
+animation-delay: 2s;
 }
 
-.loader__background {
-  position: fixed;
-  z-index: 10;
-  display: flex;
-  width: 100%;
 
-  justify-content: center;
-  align-items: center;
-
-  height: 100%;
-  background: radial-gradient(
-    circle,
-    rgba(216, 144, 250, 0.733) 36%,
-    rgba(241, 142, 195, 0.805) 100%
-  );
+.loader__background
+{
+    position:fixed;
+    z-index: 10;
+    display:flex;
+    width: 100%;
+    
+    justify-content :center ;
+    align-items: center;
+   
+    height: 100%;
+    background: radial-gradient(circle, rgba(216, 144, 250, 0.733) 36%, rgba(241, 142, 195, 0.805) 100%);
+  
 }
+
 
 /*----------- caracteristiques de placement dans la page -------*/
 
 /*----------- caracteristiques du conteneur (box) -------*/
 .container_icon {
+ 
   position: relative;
-  display: flex;
-  border-radius: 50%;
-  background-color: lighten($tierciarycolor, 15%);
+display : flex;
+border-radius:50%;
+background-color:lighten($tierciarycolor, 15%);
+justify-content: center;
+width: 250px;
+height:250px;
+align-items:center;
+&:before {
+content: '';
+  width: 270px;
   justify-content: center;
-  width: 250px;
-  height: 250px;
-  align-items: center;
-  &:before {
-    content: "";
-    width: 270px;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -10px;
-    border-radius: inherit;
-    background: linear-gradient(
-      230.46deg,
-      $primarycolor -2.98%,
-      $secondarycolor 68.14%,
-      $softbackground 80%
-    );
-    animation: spin 600ms ease;
-
-    animation-iteration-count: 4;
-  }
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: -1;
+   margin: -10px;
+   border-radius: inherit;
+  background: linear-gradient(230.46deg, $primarycolor -2.98%, $secondarycolor 68.14%, $softbackground 80%);
+  animation: spin  600ms ease;
+  
+  animation-iteration-count: 4 ;
+   font-size: 120px; /*taille de l'icone */ 
+}
 }
 /*----------- apparence du coeur "favoris" par defaut-------*/
-.fa-utensils {
-  padding-top: 12px;
+.fa-utensils-loader
+{ font-size: $loader;
+  padding-top:12px;
   padding-right: 10px;
-  font-size: 120px; /*taille de l'icone */
-  /* remplissage de l'icone */
-  color: $softbackground; /*couleur de remplissage de l'icone par defaut*/
+   /*taille de l'icone */
+    /* remplissage de l'icone */
+  color:$softbackground; /*couleur de remplissage de l'icone par defaut*/
   -webkit-text-stroke: 1px grey; /* modifie l'épaisseur du trait de contour */
-  /*----------- effet de remplissage au survol-------*/
-  &.fa-utensils:hover  /* au survol */ {
-    color: transparent; /* la couleur du background qui doit apparaitre au hover */
+    /*----------- effet de remplissage au survol-------*/ 
+    &.fa-utensils:hover  /* au survol */
+  {
+ 
+-webkit-background-clip:text;  /* https://developer.mozilla.org/fr/docs/Web/CSS/background-clip */
+    color: transparent;/* la couleur du background qui doit apparaitre au hover */   
     cursor: pointer; /* changement de l'apparence du pointer en "main" */
-    background-image: linear-gradient(
-      $primarycolor,
-      $secondarycolor
-    ); /* nouvelle apparence du background */
-    transition: color 0.5s ease-in-out; /* cible de transition, temps, et type de d'animation de l'état A à l'état B */
+    background-image: linear-gradient($primarycolor,$secondarycolor);/* nouvelle apparence du background */
+    transition: color 0.5s ease-in-out;/* cible de transition, temps, et type de d'animation de l'état A à l'état B */  
   }
 }
+
+
