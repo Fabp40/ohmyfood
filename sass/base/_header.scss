@@ -99,6 +99,7 @@ header {
 /* --- Header  propre aux pages restaurants ----*/
 
 .header__nav2 {
+    z-index: 1;
   display: flex;
   width: 100%;
   align-items: center;
@@ -125,15 +126,13 @@ header {
   }
 }
 
-.picture__restaurant {
-  display: flex;
+.presentation-container {
+  display: block;
   box-sizing: border-box;
-  justify-content: center;
-  width: 100%;
-  max-width: 768px;
-  min-width: 340px;
+    width: auto;
+  height:auto;
   position: absolute;
-  height: $hauteur-container-header-picture;
+ 
 }
 
 .header__picture {
