@@ -1021,6 +1021,58 @@ footer {
         -ms-flex-align: center;
             align-items: center;
   }
+  .menu-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    line-height: 30px;
+    width: 100%;
+    list-style: none;
+    color: white;
+  }
+  .menu-footer .__menu1footer {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    white-space: nowrap;
+  }
+  .menu-footer .__menu2footer {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    white-space: nowrap;
+  }
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu-container .step-container {
+    width: 400px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -1029,21 +1081,6 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-  }
-  .conteneur_cards_restaurants {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  .conteneur_cards_restaurants .card_restaurant {
-    max-width: 450px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
 }
 

@@ -67,20 +67,53 @@
     color: white;
     align-items: center;
   }
+  .menu-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 30px;
+    width: 100%;
+    list-style: none;
+    color: white;
+    .__menu1footer {
+      
+      width: 50% ;
+      display: flex;
+      flex-direction: column;
+      white-space: nowrap;
+    }
+    .__menu2footer {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      white-space: nowrap;
+      
+    }
+  }
+ 
+.menu-container{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  flex-wrap: wrap;
+ 
+   .step-container{
+     width: 400px;
+   }
+  }
+  
+ 
+
+
+
+
+
+
 }
 
 @media only screen and (min-width: 992px) {
   .bloc_guide_etapes {
     flex-direction: row;
   }
-  .conteneur_cards_restaurants {
-    flex-direction: row;
-    box-sizing: border-box;
-
-    .card_restaurant {
-      max-width: 450px;
-      box-sizing: border-box;
-      flex-wrap: wrap;
-    }
-  }
+  
 }
