@@ -1,0 +1,52 @@
+$primarycolor: #9356dc;
+$secondarycolor: #ff79da;
+$tierciarycolor: #99e2d0;
+$softbackground: #f4f4f4;
+$ombre: #b1b1b1;
+
+$hauteur-container-header-picture: 68vw;
+
+/*--------- mise en page de la carte du restaurant ---------*/
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 10px 10px;
+}
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  margin-top: $hauteur-container-header-picture/1.2;
+  width: 100%;
+
+  height: fit-content;
+  border-radius: 30px 30px 0px 0px;
+  background-color: $softbackground;
+}
+
+.restaurant-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px 0px 0px;
+
+  .title-restaurant {
+    font-family: "Shrikhand", cursive;
+    font-size: 30px;
+    padding-left: 20px;
+  }
+}
+
+/*--------- mise en page des étapes de repas (entree-plat-dessert)  ---------*/
+
+.menu-step {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.menu-step-title {
+  font-size: 14px;
+  padding-left: 10px;
+  height: 30px;
+}
