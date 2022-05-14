@@ -1,144 +1,12 @@
-
-
-
-
 $primarycolor: #9356dc;
 $secondarycolor: #ff79da;
 $tierciarycolor: #99e2d0;
 $softbackground: #f4f4f4;
 $ombre: #b1b1b1;
 
-
-
-
-header {
-  display: flex;
-  flex-direction: column;
-}
-.header__nav1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  height: 60px;
-
-  .logo {
-    font-family: "Shrikhand", cursive;
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}
-
-.header__nav2 {
-  display: flex;
-  width: 100%;
-
-  align-items: center;
-  background-color: white;
-  height: 60px;
-  .fleche-nav {
-    justify-content: left;
-    width: 33%;
-    padding-left: 20px;
-    margin-left: 0px;
-
-    .fa-arrow-left {
-      font-weight: bolder;
-      font-size: 16px;
-    }
-  }
-  .logo {
-    display: flex;
-    font-family: "Shrikhand", cursive;
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    justify-content: center;
-    width: 33%;
-  }
-
-  .space-nav-right {
-    width: 33%;
-  }
-}
-
-.fleche-nav {
-  width: 100%;
-  margin-left: 10%;
-
-  .fa-arrow-left {
-    font-weight: bolder;
-    font-size: 16px;
-  }
-}
-/* ------------------------Zone de recherche par ville ---------------------*/
-.header__search-bloc {
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: column;
-  width: 100%;
-  height: 350px;
-  align-items: center;
-  background-color: $softbackground;
-}
-
-.header__search__form {
-  display: flex;
-  align-items: center;
-  color: #000000c0;
-  width: 100%;
-  height: 50px;
-  justify-content: center;
-  background-color: #e7e7e7;
-  box-shadow: 0px 3px 5px #cccccc inset;
-}
-#input_city {
-  width: 160px;
-  background-color: #e7e7e7;
-  border-style: none;
-  padding-top: 7px;
-  padding-left: 10px;
-
-  &::placeholder {
-    color: #000000c0;
-    font-weight: 600;
-    font-size: medium;
-    padding-left: 10px;
-    font-size: 15px;
-  }
-}
-
-/* -------------ACCUEIL Zone de Titres /slogan Page ---------------------*/
-.text_zone_header {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-/*--------- PAGE 1 mise en page de la carte du restaurant ---------*/
 $hauteur-container-header-picture: 68vw;
 
-.picture__restaurant {
-  display: flex;
-  box-sizing: border-box;
-  justify-content: center;
- width: 100%;
- max-width: 768px;
- min-width: 340px;
-  position: absolute;
-  height: $hauteur-container-header-picture;
-  
- 
-}
-
-.header__picture {
- 
-  object-fit: cover;
- 
-  z-index: -1;
-
-}
+/*--------- mise en page de la carte du restaurant ---------*/
 
 .menu-container {
   display: flex;
@@ -148,9 +16,9 @@ $hauteur-container-header-picture: 68vw;
 .menu-card {
   display: flex;
   flex-direction: column;
-  margin-top: $hauteur-container-header-picture/1.2 ;
+  margin-top: $hauteur-container-header-picture/1.2;
   width: 100%;
-  
+
   height: fit-content;
   border-radius: 30px 30px 0px 0px;
   background-color: $softbackground;
@@ -169,7 +37,7 @@ $hauteur-container-header-picture: 68vw;
   }
 }
 
-/*--------- mise en page des plats (card) ---------*/
+/*--------- mise en page des étapes de repas (entree-plat-dessert)  ---------*/
 
 .menu-step {
   display: flex;
@@ -182,11 +50,3 @@ $hauteur-container-header-picture: 68vw;
   padding-left: 10px;
   height: 30px;
 }
-
-.container__button {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 70px;
-}
-
-

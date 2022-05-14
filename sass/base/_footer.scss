@@ -1,22 +1,35 @@
 
-.menu_footer {
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding: 20px 0px 40px 20px;
+}
+
+
+
+.menu-footer {
+  display: flex;
+  flex-direction: column;
   line-height: 30px;
   list-style: none;
   color: white;
+  .__menu1footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .__menu2footer {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .lienfooter {
   text-decoration: none;
   color: white;
-   &:hover{color: #9356dc;
+  &:hover {
+    color: #9356dc;
   }
-}
-
-.liencards {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
- 
-  
 }
 
 .fa-utensils {

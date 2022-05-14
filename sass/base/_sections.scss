@@ -1,0 +1,13 @@
+.section_page {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0px 50px 0px;
+  &#section_fontionnement {
+    background-color: #ffffff;
+    padding: 50px 0px 40px 0px;
+  }
+  &#section_restaurants {
+    background-color: #f4f4f4;
+    padding: 50px 0px 40px 0px;
+  }
+}

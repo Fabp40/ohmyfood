@@ -63,3 +63,18 @@ $ombre: #b1b1b1;
     padding-top: 15px;
   }
 }
+
+.restaurant {
+  font-size: 18px;
+  font-weight: 700;
+}
+.ville_restaurant {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.photo_restaurant {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
