@@ -279,6 +279,9 @@
   margin-top: 56.66667vw;
   width: 100%;
   position: relative;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -922,9 +925,6 @@ footer {
 }
 
 @media only screen and (min-width: 340px) {
-  .body {
-    min-width: 340px;
-  }
   .menu_1 {
     display: -webkit-box;
     display: -ms-flexbox;
