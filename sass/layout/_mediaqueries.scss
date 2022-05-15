@@ -5,7 +5,6 @@
 }
 
 @media only screen and (min-width: 340px) {
-
   .menu_1 {
     display: flex;
     flex-direction: row;
@@ -15,18 +14,6 @@
     list-style: none;
     color: white;
     align-items: center;
-  }
-
-  .presentation-container {
-    display: block;
-    box-sizing: border-box;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .header__picture {
-    object-fit: cover;
-    z-index: -1;
   }
 
   .menu-card {
@@ -67,20 +54,53 @@
     color: white;
     align-items: center;
   }
+  .menu-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 30px;
+    width: 100%;
+    list-style: none;
+    color: white;
+    .__menu1footer {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      white-space: nowrap;
+    }
+    .__menu2footer {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      white-space: nowrap;
+    }
+  }
+
+  .menu-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .step-container {
+      width: 400px;
+    }
+  }
 }
 
 @media only screen and (min-width: 992px) {
   .bloc_guide_etapes {
     flex-direction: row;
   }
-  .conteneur_cards_restaurants {
-    flex-direction: row;
-    box-sizing: border-box;
 
-    .card_restaurant {
-      max-width: 450px;
-      box-sizing: border-box;
-      flex-wrap: wrap;
-    }
+  .header__picture {
+    object-fit: cover;
+    z-index: -1;
+    height: $hauteurcont;
+    width: 100%;
+  }
+  .menu-card {
+    margin-top: $hauteurcont - (50px);
   }
 }
