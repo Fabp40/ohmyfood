@@ -105,6 +105,7 @@ header {
   align-items: center;
   background-color: white;
   height: 60px;
+  justify-content: center;
   .logo {
     display: flex;
     justify-content: center;
@@ -114,20 +115,21 @@ header {
     padding-bottom: 10px;
   }
   .fleche-nav {
-    justify-content: left;
+    position:absolute;
+    left:10px;
     width: 33%;
     padding-left: 20px;
     margin-left: 0px;
 
     .fa-arrow-left {
       font-weight: bolder;
-      font-size: 16px;
+      font-size: 20px;
     }
   }
 }
 
 .presentation-container {
-  display:flex;
+  display: flex;
   box-sizing: border-box;
   width: 100%;
   height: auto;
