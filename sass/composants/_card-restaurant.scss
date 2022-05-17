@@ -9,19 +9,23 @@ $ombre: #b1b1b1;
 
 .conteneur_cards_restaurants {
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 20px;
+  margin: 20px 20px 0px 20px;
+  
+
 }
 
 .card_restaurant {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   height: 250px;
-  width: 92%;
+  width: 100%;
   background-color: #ffffff;
-  margin-bottom: 25px;
-  margin-left: 20px;
+  
+  margin: 0px 10px 20px 10px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 1px #cccccc;
   &:hover {
@@ -52,10 +56,12 @@ $ombre: #b1b1b1;
 
 .zone_text {
   position: relative;
+  box-sizing: border-box;
   display: flex;
+  width: 95%;
   flex-direction: column;
   line-height: 25px;
-  padding-left: 10px;
+  margin-left: 10px;
   padding-top: 15px;
   .coeur_favoris {
     position: absolute;
