@@ -1186,4 +1186,8 @@ h3 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
+h1 {
+  font-size: 25px;
+}
 /*# sourceMappingURL=main.css.map */
