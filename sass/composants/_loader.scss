@@ -31,7 +31,7 @@ $loader: 28px;
 }
 }
 
-/*---------------------------*/
+/*------------ Apparence générale ---------------*/
 
 .loader{
  display: flex;
@@ -60,12 +60,12 @@ animation-delay: 2s;
 }
 
 
-/*----------- caracteristiques de placement dans la page -------*/
+
 
 /*----------- caracteristiques du conteneur (box) -------*/
 .container_icon {
  
-  position: relative;
+position: relative;
 display : flex;
 border-radius:50%;
 background-color:lighten($tierciarycolor, 15%);
@@ -92,7 +92,7 @@ content: '';
    font-size: 120px; /*taille de l'icone */ 
 }
 }
-/*----------- apparence du coeur "favoris" par defaut-------*/
+/*----------- apparence de la police -------*/
 .fa-utensils-loader
 { font-size: $loader;
   padding-top:12px;
@@ -112,5 +112,3 @@ content: '';
     transition: color 0.5s ease-in-out;/* cible de transition, temps, et type de d'animation de l'état A à l'état B */  
   }
 }
-
-
