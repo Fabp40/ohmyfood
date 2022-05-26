@@ -1,11 +1,5 @@
-$primarycolor: #9356dc;
-$secondarycolor: #ff79da;
-$tierciarycolor: #99e2d0;
-$softbackground: #f4f4f4;
-$ombre: #b1b1b1;
 
-$hauteur-container-header-picture: 68vw;
-$hauteurcont: 580px;
+
 
 /*--------- mise en page de la carte du restaurant ---------*/
 
@@ -17,7 +11,7 @@ $hauteurcont: 580px;
 .menu-card {
   display: flex;
   flex-direction: column;
-  margin-top: $hauteur-container-header-picture/1.2;
+  margin-top: calc($hauteur-container-header-picture / 1.2);
   width: 100%;
   position: relative;
   justify-content: start;
