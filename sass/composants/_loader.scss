@@ -1,10 +1,4 @@
 
-/*----------- variables de couleurs-------*/
-$primarycolor: #9356dc;
-$secondarycolor: #ff79da;
-$tierciarycolor: #99e2d0;
-$softbackground: #f4f4f4;
-$loader: 28px;
 
 
 /*--------------- Keyframes d'animation ----------------*/
@@ -67,6 +61,9 @@ animation-delay: 2s;
  
 position: relative;
 display : flex;
+  /*taille de l'icone */
+
+font-size: $loader;
 border-radius:50%;
 background-color:lighten($tierciarycolor, 15%);
 justify-content: center;
@@ -94,15 +91,15 @@ content: '';
 }
 /*----------- apparence de la police -------*/
 .fa-utensils-loader
-{ font-size: $loader;
+{ font-size: $loader;  /*taille de l'icone */
   padding-top:12px;
   padding-right: 10px;
-   /*taille de l'icone */
+  
     /* remplissage de l'icone */
   color:$softbackground; /*couleur de remplissage de l'icone par defaut*/
   -webkit-text-stroke: 1px grey; /* modifie l'épaisseur du trait de contour */
     /*----------- effet de remplissage au survol-------*/ 
-    &.fa-utensils:hover  /* au survol */
+    &.fa-utensils-loader:hover  /* au survol */
   {
  
 -webkit-background-clip:text;  /* https://developer.mozilla.org/fr/docs/Web/CSS/background-clip */

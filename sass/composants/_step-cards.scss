@@ -1,16 +1,11 @@
 
-$primarycolor: #9356dc;
-$secondarycolor: #ff79da;
-$tierciarycolor: #99e2d0;
-$softbackground: #f4f4f4;
-$ombre: #b1b1b1;
 
 
 .bloc_guide_etapes {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: baseline;
+  align-items: center;
   padding-top: 30px;
 }
 

@@ -1,0 +1,810 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+body {
+  min-width: 340px;
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+}
+
+/* ___________________import GOOGLE FONT_______________________*/
+.container__button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 70px;
+}
+
+.button#search,
+.button#command {
+  display: flex;
+  width: 220px;
+  height: 50px;
+  font-size: 15px;
+  letter-spacing: 0.6px;
+  font-weight: 400;
+  border: none;
+  user-select: none;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#ff79da, #9356dc);
+  border-radius: 25px;
+  box-shadow: 2px 3px 8px 0px #b1b1b1;
+}
+.button#search:hover,
+.button#command:hover {
+  opacity: 75%;
+  box-shadow: 4px 5px 9px 0px #666666;
+}
+
+/*-------------------------------------Zone cards_Restaurants-------------------------------- */
+.conteneur_cards_restaurants {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 20px 0px 20px;
+}
+
+.card_restaurant {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 250px;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0px 10px 20px 10px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 1px #cccccc;
+}
+.card_restaurant:hover {
+  box-shadow: 2px 2px 15px 2px #dadada;
+}
+
+.conteneur_image {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: auto;
+  height: 170px;
+  object-fit: cover;
+}
+.conteneur_image .sticky {
+  position: absolute;
+  right: 20px;
+  margin-top: 15px;
+  background-color: #99e2d0;
+  z-index: 5;
+  color: #19996e;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 15px 5px 15px;
+  border-radius: 2px;
+}
+
+.zone_text {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  width: 95%;
+  flex-direction: column;
+  line-height: 25px;
+  margin-left: 10px;
+  padding-top: 15px;
+}
+.zone_text .coeur_favoris {
+  position: absolute;
+  right: 30px;
+  padding-top: 15px;
+}
+
+.restaurant {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ville_restaurant {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.photo_restaurant {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+/*----------- apparence du coeur "favoris"-------*/
+.fa-heart {
+  position: relative;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  -webkit-text-stroke: 1.5px black;
+  /*----------- effet de remplissage au survol-------*/
+}
+.fa-heart.fa-heart:hover {
+  cursor: pointer;
+  opacity: 100%;
+  -webkit-text-stroke: 0.2px rgb(255, 230, 234);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to left top, #9356dc, #ff79da);
+  transition: color 0.5s ease-in-out;
+}
+
+.bloc_guide_etapes {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.step_card {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: start;
+  text-align: center;
+  height: 72px;
+  width: 88%;
+  max-width: 340px;
+  background-color: #f4f4f4;
+  box-shadow: 0px 3px 20px #cccccc;
+  margin: 0px 8px 25px 20px;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.step_card:hover {
+  user-select: none;
+  background-color: rgba(146, 86, 220, 0.2117647059);
+}
+.step_card:hover .icone_etape {
+  color: #9356dc;
+}
+.step_card:hover:active {
+  background-color: #9356dc;
+  opacity: 50%;
+}
+.step_card:hover:active .icone_etape {
+  color: #ff79da;
+  opacity: 100%;
+}
+
+.step_num {
+  position: relative;
+  right: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #9356dc;
+  border-radius: 50%;
+  padding: 4px 8px 4px 8px;
+}
+
+.icone_etape {
+  padding: 0px 20px 0px 15px;
+  font-size: 18px;
+  color: #bdbdbd;
+}
+
+/*--------- mise en page de la carte du restaurant ---------*/
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 10px 10px;
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 56.6666666667vw;
+  width: 100%;
+  position: relative;
+  justify-content: start;
+  height: fit-content;
+  border-radius: 30px 30px 0px 0px;
+  background-color: #f4f4f4;
+}
+
+.restaurant-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px 0px 0px;
+}
+.restaurant-title .title-restaurant {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+/*--------- mise en page des étapes de repas (entree-plat-dessert)  ---------*/
+.menu-step {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px 10px 0px;
+}
+
+.underligne {
+  display: flex;
+  position: relative;
+  width: 40px;
+  margin: 20px 0px 15px 10px;
+  border-bottom: 3px solid #99e2d0;
+}
+
+.menu-step-title {
+  position: absolute;
+  bottom: 4px;
+  font-size: 16px;
+  margin-left: 0px;
+  width: fit-content;
+}
+
+.section_page {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 50px 0px 50px 0px;
+}
+.section_page#section_fontionnement {
+  background-color: #ffffff;
+  padding: 50px 0px 40px 0px;
+}
+.section_page#section_restaurants {
+  background-color: #f4f4f4;
+  padding: 50px 0px 40px 0px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding: 20px 0px 40px 20px;
+}
+
+.menu-footer {
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+  list-style: none;
+  color: white;
+}
+.menu-footer .__menu1footer {
+  display: flex;
+  flex-direction: column;
+}
+.menu-footer .__menu2footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.lienfooter {
+  text-decoration: none;
+  color: white;
+}
+.lienfooter:hover {
+  color: #9356dc;
+}
+
+.fa-utensils {
+  padding-right: 10px;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.fa-handshake-angle {
+  padding-right: 10px;
+  font-weight: lighter;
+  font-size: 10px;
+}
+
+/*--------------- Keyframes d'animation ----------------*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    z-index: -10;
+  }
+}
+@keyframes fondu {
+  0% {
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -10;
+  }
+}
+/*------------ Apparence générale ---------------*/
+.loader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  animation: fondu 1s ease;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+
+.loader__background {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(216, 144, 250, 0.733) 36%,
+    rgba(241, 142, 195, 0.805) 100%
+  );
+}
+
+/*----------- caracteristiques du conteneur (box) -------*/
+.container_icon {
+  position: relative;
+  display: flex;
+  /*taille de l'icone */
+  font-size: 28px;
+  border-radius: 50%;
+  background-color: #d5f3eb;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  align-items: center;
+}
+.container_icon:before {
+  content: "";
+  width: 270px;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -10px;
+  border-radius: inherit;
+  background: linear-gradient(
+    230.46deg,
+    #9356dc -2.98%,
+    #ff79da 68.14%,
+    #f4f4f4 80%
+  );
+  animation: spin 600ms ease;
+  animation-iteration-count: 4;
+  font-size: 120px;
+  /*taille de l'icone */
+}
+
+/*----------- apparence de la police -------*/
+.fa-utensils-loader {
+  font-size: 28px;
+  /*taille de l'icone */
+  padding-top: 12px;
+  padding-right: 10px;
+  /* remplissage de l'icone */
+  color: #f4f4f4;
+  /*couleur de remplissage de l'icone par defaut*/
+  -webkit-text-stroke: 1px grey;
+  /* modifie l'épaisseur du trait de contour */
+  /*----------- effet de remplissage au survol-------*/
+}
+.fa-utensils-loader.fa-utensils-loader:hover {
+  -webkit-background-clip: text;
+  /* https://developer.mozilla.org/fr/docs/Web/CSS/background-clip */
+  color: transparent;
+  /* la couleur du background qui doit apparaitre au hover */
+  cursor: pointer;
+  /* changement de l'apparence du pointer en "main" */
+  background-image: linear-gradient(#9356dc, #ff79da);
+  /* nouvelle apparence du background */
+  transition: color 0.5s ease-in-out;
+  /* cible de transition, temps, et type de d'animation de l'état A à l'état B */
+}
+
+/*-------ANIMATION ET contenu des cards "plat"---------*/
+.dish__card {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: start;
+  height: 72px;
+  min-width: 88%;
+  box-shadow: 0px 3px 20px #cccccc;
+  margin: 0px 8px 25px 10px;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.dish__card:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+}
+.dish__card:hover .fa-circle-check {
+  color: white;
+  z-index: 10;
+  transform: rotate(360deg);
+  transition: transform 400ms ease-in-out;
+}
+.dish__card:hover .slider__zone {
+  width: 20%;
+  transition: 400ms;
+}
+
+.description {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.dish__text-zone {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.dish__text-zone .dish__title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dish__text-zone .accompagnement {
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 400;
+  text-overflow: ellipsis;
+}
+
+.price__zone {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  padding-top: 18px;
+}
+
+.slider__zone {
+  display: flex;
+  width: 0%;
+  height: 100%;
+  place-content: center;
+  align-items: center;
+  color: white;
+  background-color: #99e2d0;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.fa-circle-check {
+  color: transparent;
+  z-index: -1;
+  display: flex;
+  transform: rotate(0deg);
+  transition: transform 600ms ease-in-out;
+  font-size: larger;
+}
+
+.dish__card:nth-child(1) {
+  animation: slidesUp;
+  animation-duration: 1s;
+  animation-delay: 1.1s;
+}
+
+.dish__card:nth-child(2) {
+  animation: slidesUp;
+  animation-duration: 1s;
+  animation-delay: 1.2s;
+}
+
+.dish__card:nth-child(3) {
+  animation: slidesUp;
+  animation-duration: 1s;
+  animation-delay: 1.3s;
+}
+
+.dish__card:nth-child(4) {
+  animation: slidesUp;
+  animation-duration: 1s;
+  animation-delay: 1.4s;
+}
+
+@keyframes slidesUp {
+  0% {
+    opacity: 0;
+    position: relative;
+    top: 30px;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    top: 0;
+  }
+}
+@media only screen and (min-width: 200px) {
+  .menu-card {
+    top: -70px;
+  }
+
+  footer {
+    margin-top: -70px;
+  }
+
+  .conteneur_cards_restaurants {
+    padding-bottom: 70px;
+  }
+}
+@media only screen and (min-width: 340px) {
+  .menu-card {
+    top: -50px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .bloc_guide_etapes {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .conteneur_cards_restaurants {
+    flex-direction: row;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+  }
+
+  .card_restaurant {
+    max-width: 380px;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo_footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .menu-footer .__menu1footer {
+    width: 50%;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .menu-footer .__menu1footer h3 {
+    justify-content: center;
+  }
+  .menu-footer .__menu2footer {
+    width: 50%;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .menu-footer .__menu2footer h3 {
+    justify-content: center;
+  }
+
+  .menu-container {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .menu-container .step-container {
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .bloc_guide_etapes {
+    flex-direction: row;
+  }
+
+  .header__picture {
+    height: 580px;
+    width: 100%;
+  }
+
+  .menu-card {
+    margin-top: 500px;
+  }
+
+  .header__nav2 {
+    height: 100px !important;
+  }
+
+  .logo {
+    font-size: 50px !important;
+  }
+
+  .fa-arrow-left {
+    font-size: 30px !important;
+  }
+}
+/*----------header page d'accueil --------*/
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__nav1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 60px;
+}
+.header__nav1 .logo {
+  display: flex;
+  justify-content: center;
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.space-nav-right {
+  width: 33%;
+}
+
+.fleche-nav {
+  width: 100%;
+  margin-left: 10%;
+}
+.fleche-nav .fa-arrow-left {
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+/* ------------------------Zone de recherche par ville ---------------------*/
+.header__search-bloc {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+  height: 350px;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.header__search__form {
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7529411765);
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  background-color: #e7e7e7;
+  box-shadow: 0px 3px 5px #cccccc inset;
+}
+
+input#input_city {
+  width: 160px;
+  background-color: #e7e7e7;
+  outline: none;
+  border: 3px solid #e7e7e7;
+  padding-top: 7px;
+  padding-left: 10px;
+}
+input#input_city::placeholder {
+  font-weight: 600;
+  font-size: medium;
+  padding-left: 10px;
+  font-size: 15px;
+}
+input#input_city:focus {
+  background-color: #99e2d0;
+}
+
+/* ---------En-têtes communes et ACCUEIL ( logo ) ----*/
+.home-page__title {
+  font-size: 25px;
+  padding-bottom: 15px;
+  font-size: 25px;
+  font-weight: 900;
+  padding: 40px 40px 15px 40px;
+  line-height: 27px;
+}
+
+.text_zone_header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.slogan {
+  color: rgba(0, 0, 0, 0.7529411765);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+  padding-bottom: 30px;
+}
+
+/* --- Header  propre aux pages restaurants ----*/
+.header__nav2 {
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  height: 60px;
+  justify-content: center;
+}
+.header__nav2 .logo {
+  display: flex;
+  justify-content: center;
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.header__nav2 .fleche-nav {
+  position: absolute;
+  left: 10px;
+  width: 33%;
+  padding-left: 20px;
+  margin-left: 0px;
+}
+.header__nav2 .fleche-nav .fa-arrow-left {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.presentation-container {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+.header__picture {
+  object-fit: cover;
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/*------------- Section 1 étapes -----------*/
+h2 {
+  display: inline-flex;
+}
+h2.section__title {
+  margin-left: 20px;
+  font-size: 25px;
+  font-weight: 900;
+}
+h2.dish__title {
+  font-weight: bolder;
+}
+
+/*-------------- h3 du Footer --------------*/
+h3 {
+  display: flex;
+  font-size: 16px;
+  width: 60%;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+/* ___________________import reset_______________________*/
+
+/*# sourceMappingURL=style.css.map */
